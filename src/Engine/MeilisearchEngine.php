@@ -24,7 +24,7 @@ class MeilisearchEngine extends Engine
     /**
      * @var Meilisearch
      */
-    protected $meilisearch;
+    protected Meilisearch $meilisearch;
 
     /**
      * Create a new engine instance.
@@ -151,7 +151,7 @@ class MeilisearchEngine extends Engine
      *
      * @return string
      */
-    protected function filters(Builder $builder)
+    protected function filters(Builder $builder): string
     {
         return collect($builder->wheres)->map(function ($value, $key) {
             return sprintf('%s="%s"', $key, $value);
