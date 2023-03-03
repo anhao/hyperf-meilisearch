@@ -5,6 +5,7 @@
 - hyperf ^2.1
 - hyperf scout ^2.1
 - guzzlehttp ~7
+- meilisearch ^0.29
 
 ## MeiliSearch
 `MeiliSearch` 是一个快捷、易用且易部署的全文搜索引擎，支持自定义搜索和索引，支持容错搜索、过滤器和同义词。天生支持中文搜索。同时支持搜索结果词语高亮显示等。相比ElasticSearch，MeiliSearch更加轻量化。
