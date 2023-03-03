@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  support@alapi.cn
  * @license  https://github.com/anhao/hyperf-meilisearch/blob/main/LICENSE
  */
+
 namespace Alapi\Meilisearch\Engine;
 
 use Hyperf\Database\Model\Collection;
@@ -53,7 +54,7 @@ class MeilisearchEngine extends Engine
             return array_merge($searchableData, $model->scoutMetadata());
         })->filter()->values()->all();
 
-        if (! empty($objects)) {
+        if (!empty($objects)) {
             $index->addDocuments($objects, $models->first()->getKeyName());
         }
     }
@@ -81,7 +82,7 @@ class MeilisearchEngine extends Engine
     {
         return $this->performSearch($builder, array_filter([
             'filters' => $this->filters($builder),
-            'limit' => (int) $perPage,
+            'limit' => $perPage,
             'offset' => ($page - 1) * $perPage,
         ]));
     }
@@ -119,7 +120,7 @@ class MeilisearchEngine extends Engine
 
     public function getTotalCount($results): int
     {
-        return (int) $results['nbHits'];
+        return (int)$results['nbHits'];
     }
 
     public function flush(Model $model): void
