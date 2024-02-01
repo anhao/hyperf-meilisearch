@@ -29,10 +29,10 @@
     "require": {
         "php": ">=8.0",
         "http-interop/http-factory-guzzle": "^1.0",
-        "hyperf/di": "3.0.*",
-        "hyperf/framework": "3.0.*",
-        "hyperf/guzzle": "3.0.*",
-        "hyperf/scout": "3.0.*",
+        "hyperf/di": "~3.1.0",
+        "hyperf/framework": "~3.1.0",
+        "hyperf/guzzle": "~3.0.0",
+        "hyperf/scout": "~3.0.0",
         "meilisearch/meilisearch-php": "1.0.*"
     },
     "require-dev": {
