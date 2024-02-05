@@ -12,13 +12,14 @@ declare(strict_types=1);
 
 namespace Alapi\Meilisearch\Engine;
 
+use Hyperf\Collection\Collection as BaseCollection;
 use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Model;
 use Hyperf\Scout\Builder;
 use Hyperf\Scout\Engine\Engine;
-use Hyperf\Utils\Collection as BaseCollection;
 use MeiliSearch\Client as Meilisearch;
 use MeiliSearch\Search\SearchResult;
+use function Hyperf\Collection\collect;
 
 class MeilisearchEngine extends Engine
 {
